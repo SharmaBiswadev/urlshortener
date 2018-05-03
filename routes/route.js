@@ -34,7 +34,7 @@ app.route('/new/:url(*)')
           data.save((err)=>{
            return res.end("Error in saving to database");
           })
-           res.status(200).send(_.pick(data,['originalUrl','shorturl']));
+           res.status(200).send(_.pick(data,['originalUrl','shorturl']) +" *please add shorturl to redirect to original url i.e. https://urlshrtener.herokuapp.com/shorturl ");
 }else{
          data=new shorturl({
             originalUrl: "urltoshorten doesnot match standard pattern",

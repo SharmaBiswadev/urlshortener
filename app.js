@@ -11,7 +11,7 @@ var router=require("./routes/route")
 app.use(cors());
 const _=require('lodash');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://bittus:bittus@ds161529.mlab.com:61529/shorturls');
+mongoose.connect('');
 var db=mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
